@@ -79,17 +79,9 @@ document.getElementById("lead-form").addEventListener("submit", async (e) => {
     successEl.hidden = false;
     successEl.scrollIntoView({ behavior: "smooth", block: "center" });
 
-    // Contagem regressiva 3s → volta ao Instagram (ManyChat)
-    const countEl = document.getElementById("countdown");
-    let seg = 3;
-    const timer = setInterval(() => {
-      seg--;
-      if (countEl) countEl.textContent = seg;
-      if (seg <= 0) {
-        clearInterval(timer);
-        window.open(INSTAGRAM_URL, "_blank");
-      }
-    }, 1000);
+   // Redireciona na mesma aba (sem popup)
+window.location.href =
+  `https://instagram.com`;
 
   } catch (err) {
     setError("telefone", "Erro ao enviar. Tente novamente.");
