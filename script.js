@@ -5,7 +5,7 @@
 const SHEET_URL = "https://script.google.com/macros/s/AKfycbxdFplWVSfhTjvyIA7HIWb645xRjGNhBVhTdTf5UMjo0lSpW_A_jCuys0qB4uImKXPQ/exec";
 
 // Link de retorno ao Instagram/ManyChat (DM) — ?ref= dispara o fluxo no ManyChat
-const INSTAGRAM_URL = "https://ig.me/m/prof.evertonmota?ref=pmpe";
+const INSTAGRAM_URL = "https://instagram.com";
 
 /* --- Máscara: (00) 00000-0000 --- */
 const telefoneInput = document.getElementById("telefone");
