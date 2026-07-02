@@ -2,7 +2,7 @@
    CPPEM — Formulário → Google Sheets + redirect Instagram (ManyChat)
    ========================================================= */
 
-const SHEET_URL = "https://script.google.com/macros/s/AKfycbxdFplWVSfhTjvyIA7HIWb645xRjGNhBVhTdTf5UMjo0lSpW_A_jCuys0qB4uImKXPQ/exec";
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbxdFplWVSfhTjvyIA7HIWb645xRjGNhBVhTdTf5UMjo0lSpW_A_jCuys0qB4uImKXPQ/exec?aba=MANYCHAT";
 
 // Link de retorno ao Instagram/ManyChat (DM) — ?ref= dispara o fluxo no ManyChat
 const INSTAGRAM_URL = "https://instagram.com";
