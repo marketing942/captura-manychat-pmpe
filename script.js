@@ -71,9 +71,6 @@ document.getElementById("lead-form").addEventListener("submit", async (e) => {
 
     e.target.reset();
 
-    // Dispara evento Lead no Meta Pixel
-    if (typeof fbq !== "undefined") fbq('track', 'Lead');
-
     // Mostra mensagem de sucesso
     const successEl = document.getElementById("form-success");
     successEl.hidden = false;
