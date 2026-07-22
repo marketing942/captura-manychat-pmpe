@@ -7,18 +7,8 @@ const SHEET_URL = "https://script.google.com/macros/s/AKfycbxdFplWVSfhTjvyIA7HIW
 // Link de retorno ao Instagram/ManyChat (DM) — ?ref= dispara o fluxo no ManyChat
 const INSTAGRAM_URL = "https://instagram.com";
 
-/* --- Máscara: (00) 00000-0000 --- */
+/* --- Campo de WhatsApp (entrada livre, sem máscara) --- */
 const telefoneInput = document.getElementById("telefone");
-
-telefoneInput.addEventListener("input", () => {
-  let d = telefoneInput.value.replace(/\D/g, "").slice(0, 11);
-  let out = "";
-  if (d.length > 0)  out  = "(" + d.slice(0, 2);
-  if (d.length >= 2) out += ") ";
-  if (d.length > 2)  out += d.slice(2, 7);
-  if (d.length > 7)  out += "-" + d.slice(7, 11);
-  telefoneInput.value = out;
-});
 
 /* --- Validação --- */
 function setError(id, msg) {
@@ -35,13 +25,13 @@ function validate() {
   let ok = true;
   const nome  = document.getElementById("nome").value.trim();
   const email = document.getElementById("email").value.trim();
-  const tel   = telefoneInput.value.replace(/\D/g, "");
+  const tel   = telefoneInput.value.trim();
 
   ["nome","email","telefone"].forEach(clearError);
 
   if (nome.length < 2) { setError("nome",     "Informe seu nome completo.");  ok = false; }
   if (!isEmail(email)) { setError("email",    "Informe um e-mail válido.");   ok = false; }
-  if (tel.length < 11) { setError("telefone", "Informe o telefone com DDD."); ok = false; }
+  if (tel.length === 0) { setError("telefone", "Informe seu WhatsApp.");      ok = false; }
 
   return ok;
 }
